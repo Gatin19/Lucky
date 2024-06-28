@@ -1,8 +1,8 @@
-const colors = require("colors");
+const colors = require("colors")
 
 module.exports = {
     name: "ready",
     run: async(client) => {
-        console.log("[CLIENT] ".green + client.user.tag + "• Online")
+        console.log("[CLIENT] ".green.bold + client.user.tag + "• Online")
     }
 }

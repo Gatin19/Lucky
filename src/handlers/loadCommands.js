@@ -3,8 +3,8 @@ const colors = require("colors");
 const Table = require("cli-table3");
 
 module.exports = (client) => {
-    const eventTable = new Table({
-        head: ["Load Events".blue.bold],
+    const commandTable = new Table({
+        head: ["Load commands".blue.bold],
         chars: {
             'top': '─',
             'top-mid': '┬',
@@ -26,13 +26,17 @@ module.exports = (client) => {
         colWidths: [25],
         colAligns: ["center"]
     });
+    fs.readdirSync("src/commands").forEach(folder => {
+        fs.readdirSync(`src/commands/${folder}`).forEach(file => {
+            const cmd = require(`../commands/${folder}/${file}`)
+            client.commands.set(cmd.name, cmd)
 
-    fs.readdirSync("src/events").forEach(file => {
-        const event = require(`../events/${file}`)
-        client.on(event.name, event.run)
-        eventTable.push(
-            ["Loaded ".green.bold + event.name]
-        )
+            commandTable.push(
+                ["Loaded ".green.bold + cmd.name ]
+            )
+        })
     })
-    console.log(eventTable.toString())
+
+
+    console.log(commandTable.toString())
 }
