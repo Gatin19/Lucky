@@ -1,0 +1,13 @@
+{
+    "devs": ["92478729903892486"],
+    "icons": {
+        "correct": "<:icons_Correct:1255144581771690014>",
+        "wrong": "<:icons_Wrong:1255144568651911249>",
+        "image": "<:icons_image:1255148204291391674>",
+        "dac": "<:icons_DAC:1255151417728176254>",
+        "dollar": "<:icons_dollar:1255150964684623902>",
+        "info": "<:icons_info:1255150202860343498>",
+        "bank": "<:icons_bank:1255150941838250025>",
+        "creditcard": "<:icons_creditcard:1255150951543869551>"
+    }
+}
