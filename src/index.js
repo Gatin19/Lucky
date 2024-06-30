@@ -1,4 +1,4 @@
-const { CreateClient } = require("./discord/structure/Client.js");
+const { CreateClient } = require("./discord/base/Client.js");
 
 const client = new CreateClient()
 

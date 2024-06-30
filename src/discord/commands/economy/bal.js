@@ -11,8 +11,9 @@ module.exports = {
 
         const embed = new EmbedBuilder()
         .setAuthor({ name: user.username, iconURL: user.displayAvatarURL() })
-        .setDescription(`${user} tem \`${userDB.money.toLocaleString()}\` em sua carteira.`)
-        .setTimestamp();
+        .setDescription(`${user} tem **R$${userDB.money.toLocaleString()}** em sua carteira.`)
+        .setTimestamp()
+        .setColor(0x43B581);
 
         message.reply({
             embeds: [embed]
