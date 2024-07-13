@@ -1,4 +1,4 @@
-const userSchema = require("../../../schemas/users")
+const userSchema = require("../../../database/schemas/users")
 const { relativeTime } = require("util-stunks")
 const { EmbedBuilder } = require("discord.js")
 const ms = require("ms")

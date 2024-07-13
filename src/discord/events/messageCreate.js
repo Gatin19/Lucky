@@ -1,6 +1,6 @@
 const client = require('../../index')
-const guilds = require("../../schemas/guilds")
-const users = require("../../schemas/users")
+const guilds = require("../../database/schemas/guilds")
+const users = require("../../database/schemas/users")
 
 module.exports = {
     name: 'messageCreate',

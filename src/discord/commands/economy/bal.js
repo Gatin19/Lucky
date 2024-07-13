@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
-const users = require("../../../schemas/users")
+const users = require("../../../database/schemas/users")
 
 module.exports = {
     name: "saldo",
